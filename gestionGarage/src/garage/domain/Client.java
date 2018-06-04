@@ -4,16 +4,30 @@ import garage.domain.Personne;
 import garage.domain.Vehicule;
 
 public class Client extends Personne{
-	int numeroTel;
+	String numeroTel;
 	String mail;
-	
-	public void seConnecter() {
+	String motdepasse;
 		
+	public String getNumeroTel() {
+		return numeroTel;
 	}
+	public void setNumeroTel(String numeroTel) {
+		this.numeroTel = numeroTel;
+	}
+	public String getMail() {
+		return mail;
+	}
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+	public String getMotdepasse() {
+		return motdepasse;
+	}
+	public void setMotdepasse(String motdepasse) {
+		this.motdepasse = motdepasse;
+	}
+
 	
-	public void seDeconnecter() {
-		
-	}
 	
 	public void acheterVehicule(Vehicule vehicule) {
 		System.out.println("Le client " + this.prenom + " " + this.nom + " a acheté un véhicule de type " + vehicule.typeMoteur+".");
